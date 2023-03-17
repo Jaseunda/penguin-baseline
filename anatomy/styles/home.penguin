@@ -1,0 +1,18 @@
+@import './inputs.skin';
+@import './buttons.skin';
+
+.home {
+  padding: 20px;
+
+  .text-field {
+    @apply .text-field;
+  }
+
+  .primary-button {
+    @apply .primary-button;
+  }
+
+  .secondary-button {
+    @apply .secondary-button;
+  }
+}

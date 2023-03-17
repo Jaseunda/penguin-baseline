@@ -1,0 +1,24 @@
+import api from './api.penguin';
+
+name = ''
+email = ''
+phone = ''
+result = ''
+
+def handleNameChange(text: str) -> None:
+    setState({'name': text})
+
+def handleEmailChange(text: str) -> None:
+    setState({'email': text})
+
+def handlePhoneChange(text: str) -> None:
+    setState({'phone': text})
+
+def handleSubmit() -> None:
+    user = {
+        'name': state.name,
+        'email': state.email,
+        'phone': state.phone,
+    }
+    created_user = api.create_user(user)
+    setState({'result': f"User created: {created_user['name']}"})

@@ -1,0 +1,10 @@
+import router from './router.penguin';
+
+def render() -> None:
+    view(
+        children=[
+            router.render()
+        ]
+    )
+
+start(render)

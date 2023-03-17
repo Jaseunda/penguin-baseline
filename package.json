@@ -1,0 +1,29 @@
+{
+  "name": "penguin-app",
+  "version": "1.0.0",
+  "description": "A sample app built with the Penguin programming language",
+  "main": "src/index.brain",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject",
+    "build": "expo build:android"
+  },
+  "dependencies": {
+    "expo": "^42.0.0",
+    "expo-font": "^9.2.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-42.0.0.tar.gz",
+    "react-native-web": "0.17.1",
+    "react-router-dom": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/react": "~17.0.0",
+    "@types/react-native": "~0.64.0",
+    "@types/react-native-web": "~0.14.0",
+    "typescript": "~4.3.5"
+  }
+}

@@ -1,0 +1,21 @@
+import { BrowserRouter, Link } from 'react-router-dom';
+import { Route, Switch } from 'react-router';
+
+import Home from './pages/home.penguin';
+
+function App() {
+  return (
+    <div>
+      <nav>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+        </ul>
+      </nav>
+      <Switch>
+        <Route exact path="/" component={Home} />
+      </Switch>
+    </div>
+  );
+}
+
+export default App;

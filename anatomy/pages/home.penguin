@@ -1,0 +1,29 @@
+import Button from '../components/button.brain';
+import TextField from '../components/textfield.brain';
+import { add, subtract } from '../utils/math.brain';
+
+import './styles/home.penguin';
+
+function Home() {
+  const [count, setCount] = useState(0);
+  const [name, setName] = useState('');
+
+  const handleIncrement = () => setCount(count + 1);
+  const handleDecrement = () => setCount(count - 1);
+  const handleNameChange = (event) => setName(event.target.value);
+
+  return (
+    <div className="home">
+      <h1>Home</h1>
+      <Button label="Increment" onClick={handleIncrement} className="primary-button" />
+      <Button label="Decrement" onClick={handleDecrement} className="secondary-button" />
+      <p>The current count is: {count}</p>
+      <TextField label="Name" value={name} onChange={handleNameChange} className="text-field" />
+      <p>Hello, {name}!</p>
+      <p>The sum of 2 and 3 is {add(2, 3)}.</p>
+      <p>The difference between 5 and 2 is {subtract(5, 2)}.</p>
+    </div>
+  );
+}
+
+export default Home;

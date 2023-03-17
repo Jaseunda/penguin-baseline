@@ -1,0 +1,38 @@
+container = {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
+}
+
+title = {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 16
+}
+
+text = {
+    fontSize: 18,
+    marginBottom: 8,
+}
+
+input = {
+    borderWidth: 1,
+    borderColor: 'gray',
+    borderRadius: 4,
+    padding: 8,
+    marginBottom: 16,
+    width: 300,
+}
+
+button = {
+    backgroundColor: 'blue',
+    padding: 8,
+    borderRadius: 4,
+    marginBottom: 16,
+}
+
+result = {
+    fontSize: 16,
+    color: 'green',
+    marginBottom: 16,
+}

@@ -1,0 +1,10 @@
+import HomePage from './components/HomePage.penguin';
+import UsersPage from './components/UsersPage.penguin';
+import CreateUserPage from './components/CreateUserPage.penguin';
+
+def routes() -> Dict:
+    return {
+        '/': HomePage,
+        '/users': UsersPage,
+        '/create-user': CreateUserPage,
+    }

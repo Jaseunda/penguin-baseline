@@ -1,0 +1,22 @@
+import skin from '../styles.skin';
+
+def render() -> None:
+    view(
+        style=skin.container,
+        children=[
+            text(
+                style=skin.title,
+                children="Home Page"
+            ),
+            button(
+                style=skin.button,
+                onPress=router.push('/users'),
+                children="View Users",
+            ),
+            button(
+                style=skin.button,
+                onPress=router.push('/create-user'),
+                children="Create User",
+            ),
+        ],
+    )

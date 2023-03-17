@@ -1,0 +1,47 @@
+import skin from '../styles.skin';
+import api from '../api.penguin';
+import brain from '../function.brain';
+
+def componentDidMount() -> None:
+    setState({'loading': True})
+    users = api.get_users()
+    setState({'users': users, 'loading': False})
+
+def render() -> None:
+    if state.loading:
+        return view(
+            style=skin.container,
+            children=[
+                text(
+                    style=skin.title,
+                    children="Loading...",
+                ),
+            ],
+        )
+    return view(
+        style=skin.container,
+        children=[
+            text(
+                style=skin.title,
+                children="Users Page",
+            ),
+            *[text(
+                style=skin.text,
+                children=f"Name: {user['name']}, Email: {user['email']}",
+            ) for user in state.users],
+            button(
+                style=skin.button,
+                onPress=router.push('/create-user'),
+                children="Create User",
+            ),
+            button(
+                style=skin.button,
+                onPress=router.pop,
+                children="Go back",
+            ),
+            text(
+                style=skin.result,
+                children=brain.result,
+            ),
+        ],
+    )

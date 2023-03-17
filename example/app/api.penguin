@@ -1,0 +1,9 @@
+import requests
+
+def get_users() -> Dict:
+    response = requests.get('https://jsonplaceholder.typicode.com/users')
+    return response.json()
+
+def create_user(user: Dict) -> Dict:
+    response = requests.post('https://jsonplaceholder.typicode.com/users', json=user)
+    return response.json()

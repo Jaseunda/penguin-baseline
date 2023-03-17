@@ -1,0 +1,43 @@
+import skin from '../styles.skin';
+import api from '../api.penguin';
+import brain from '../function.brain';
+
+def render() -> None:
+    view(
+        style=skin.container,
+        children=[
+            text(
+                style=skin.title,
+                children="Create User Page",
+            ),
+            input(
+                style=skin.input,
+                placeholder="Name",
+                onChangeText=brain.handleNameChange,
+            ),
+            input(
+                style=skin.input,
+                placeholder="Email",
+                onChangeText=brain.handleEmailChange,
+            ),
+            input(
+                style=skin.input,
+                placeholder="Phone",
+                onChangeText=brain.handlePhoneChange,
+            ),
+            button(
+                style=skin.button,
+                onPress=brain.handleSubmit,
+                children="Submit",
+            ),
+            button(
+                style=skin.button,
+                onPress=router.pop,
+                children="Go back",
+            ),
+            text(
+                style=skin.result,
+                children=brain.result,
+            ),
+        ],
+    )
